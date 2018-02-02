@@ -10,16 +10,16 @@ const pokemonQuery = {
    resolve : (root, args) => {
     return pokemonsDb.find(pokemon => pokemon.id === args.id)
   }
-}
+};
 
 const pokemonsQuery = {
   type: graphql.GraphQLList(pokemonType),
   resolve : (root, args) => {
    return pokemonsDb
  }
-}
+};
 
 module.exports = {
   pokemonQuery,
   pokemonsQuery
-}
+};

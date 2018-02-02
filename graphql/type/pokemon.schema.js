@@ -6,7 +6,7 @@ const pokemonType = new graphql.GraphQLObjectType({
         id: { type: graphql.GraphQLInt },
         name: { type: graphql.GraphQLString },
         order: { type: graphql.GraphQLInt },
-        img: { type: graphql.GraphQLString, resolve: pokemon => pokemon.sprites.front_default }
+        img: { type: graphql.GraphQLString }
     }
 });
 

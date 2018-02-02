@@ -23,7 +23,7 @@ describe('Test the root path', () => {
         expect(response.body.data.createPokemon).toEqual(createPokemonMock);
     });
 
-    it('It should response the Delete method to New Pokemon', async () => {
+    it('It should response the Delete method to a Pokemon', async () => {
         const response = await request(app).post('/graphql').send( { query: deleteMutation } );
         expect(response.body.data.deletePokemon.id).toEqual(1);
     });
